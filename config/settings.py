@@ -6,7 +6,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-landri-portfolio-change-this-in-production-abc123xyz')
 
-DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+IS_PRODUCTION = bool(os.environ.get('DATABASE_URL'))
+DEBUG = not IS_PRODUCTION
 
 ALLOWED_HOSTS = ['*']
 
@@ -73,7 +74,11 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR / 'static']
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = (
+    'whitenoise.storage.CompressedManifestStaticFilesStorage'
+    if IS_PRODUCTION
+    else 'django.contrib.staticfiles.storage.StaticFilesStorage'
+)
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
