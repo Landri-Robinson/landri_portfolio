@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Landri Robinson — AI Portfolio{% endblock %}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  {% block extra_css %}{% endblock %}
+</head>
+<body>
+
+  <header class="site-header">
+
+  <!-- Navbar -->
+  <nav class="navbar-main">
+    <div class="container d-flex align-items-center justify-content-between position-relative">
+      <!-- Left Links -->
+      <div class="d-flex gap-1">
+        <a href="{% url 'home' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+        <a href="{% url 'about' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+        <a href="{% url 'projects' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a>
+      </div>
+
+      <!-- Center Brand -->
+      <a href="{% url 'home' %}" class="navbar-brand-center">My Portfolio</a>
+
+      <!-- Right Links -->
+      <div class="d-flex gap-1 align-items-center">
+        <a href="{% url 'skills' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'skills' %}active{% endif %}">Skills</a>
+        <a href="{% url 'resume' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'resume' %}active{% endif %}">Resume</a>
+        <a href="{% url 'contact' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+        {% if user.is_authenticated %}
+          <a href="{% url 'dashboard' %}" class="nav-link-custom">Dashboard</a>
+          <a href="{% url 'logout' %}" class="nav-link-custom">Logout</a>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- Social icons pinned to far right edge -->
+    <div class="navbar-social-icons">
+      <a href="https://github.com/" target="_blank" class="nav-link-custom"><i class="bi bi-github"></i></a>
+      <a href="https://www.linkedin.com/in/landri-robinson-632848255/" target="_blank" class="nav-link-custom"><i class="bi bi-linkedin"></i></a>
+    </div>
+  </nav>
+
+  </header>
+
+  <!-- Messages -->
+  {% if messages %}
+    <div class="container mt-3">
+      {% for message in messages %}
+        <div class="alert-success-custom">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container text-center">
+      <div class="footer-name">Landri Robinson</div>
+      <div class="footer-tagline">Built with Intention. Designed for Trust.</div>
+      <div class="footer-links">
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'projects' %}">Projects</a>
+        <a href="{% url 'resume' %}">Resume</a>
+        <a href="{% url 'contact' %}">Contact</a>
+      </div>
+      <div class="footer-copy">© 2026 Landri Robinson. Built with Django.</div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('contextmenu', function(e) {
+      if (e.target.tagName === 'IMG') e.preventDefault();
+    });
+    document.addEventListener('click', function(e) {
+      var card = e.target.closest('.project-card[data-href]');
+      if (card && !e.target.closest('a')) window.location.href = card.dataset.href;
+    });
+  </script>
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

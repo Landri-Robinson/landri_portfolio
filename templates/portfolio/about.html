@@ -1,0 +1,38 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% block title %}About — Landri Robinson{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <span class="page-header-eyebrow">Get to Know Me</span>
+    <h1 class="page-header-title">About Landri</h1>
+    <p class="page-header-sub">{{ profile.about_tagline }}</p>
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--white)">
+  <div class="container">
+    <div class="row g-5 align-items-start">
+      <div class="col-md-5">
+        <div style="width:100%;height:420px;background:#FFFFFF;display:flex;align-items:center;justify-content:center;overflow:hidden;">
+          <img src="{% static 'images/My Headshot-edited-.jpg' %}" alt="Landri Robinson" style="max-width:100%;max-height:100%;object-fit:contain;" />
+        </div>
+      </div>
+      <div class="col-md-7">
+        <span class="section-eyebrow">My Story</span>
+        <h2 class="section-title">{{ profile.about_heading }}</h2>
+        <div class="section-divider"></div>
+        <p style="color:var(--charcoal-lt);line-height:1.95;font-size:0.95rem">
+          {{ profile.about_bio }}
+        </p>
+        <div class="mt-4">
+          <a href="{% url 'resume' %}" class="btn-primary-custom">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

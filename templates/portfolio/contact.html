@@ -1,0 +1,49 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Contact — Landri Robinson{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <span class="page-header-eyebrow">Get In Touch</span>
+    <h1 class="page-header-title">Contact</h1>
+    <p class="page-header-sub">Feel free to reach out — I'd love to connect.</p>
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--cream)">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div style="background:var(--white);border:1px solid var(--border);padding:48px">
+
+          {% if profile.contact_email %}
+          <div class="mb-5">
+            <span style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px">Email</span>
+            <a href="mailto:{{ profile.contact_email }}" style="font-size:1rem;color:var(--charcoal)">{{ profile.contact_email }}</a>
+          </div>
+          {% endif %}
+
+          {% if profile.contact_location %}
+          <div class="mb-5">
+            <span style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:6px">Location</span>
+            <span style="font-size:1rem;color:var(--charcoal)">{{ profile.contact_location }}</span>
+          </div>
+          {% endif %}
+
+          {% if profile.linkedin_url %}
+          <div>
+            <span style="font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:14px">LinkedIn</span>
+            <a href="{{ profile.linkedin_url }}" target="_blank" class="btn-primary-custom">
+              <i class="bi bi-linkedin me-2"></i>View LinkedIn Profile
+            </a>
+          </div>
+          {% endif %}
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

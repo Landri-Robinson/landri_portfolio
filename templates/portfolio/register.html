@@ -1,0 +1,27 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Register — Landri Robinson{% endblock %}
+{% block content %}
+<section style="background:var(--cream);min-height:70vh;display:flex;align-items:center">
+  <div class="container">
+    <div class="auth-card">
+      <h2 style="font-family:'Cormorant Garamond',serif;font-size:2rem;margin-bottom:8px">Create Account</h2>
+      <p style="font-size:0.85rem;color:var(--charcoal-lt);margin-bottom:28px">Register to manage your portfolio.</p>
+      <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="mb-4">
+          <label style="font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--charcoal-lt);display:block;margin-bottom:6px">{{ field.label }}</label>
+          {{ field }}
+          {% if field.errors %}<div style="color:#c0392b;font-size:0.8rem;margin-top:4px">{{ field.errors.0 }}</div>{% endif %}
+          {% if field.help_text %}<div style="font-size:0.75rem;color:var(--charcoal-lt);margin-top:4px">{{ field.help_text }}</div>{% endif %}
+        </div>
+        {% endfor %}
+        <button type="submit" class="btn-primary-custom w-100">Create Account</button>
+      </form>
+      <p style="font-size:0.82rem;color:var(--charcoal-lt);margin-top:20px;text-align:center">
+        Already have an account? <a href="{% url 'login' %}" style="color:var(--slate-dark)">Sign In</a>
+      </p>
+    </div>
+  </div>
+</section>
+{% endblock %}

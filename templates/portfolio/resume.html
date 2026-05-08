@@ -1,0 +1,151 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Resume — Landri Robinson{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container d-flex justify-content-between align-items-end flex-wrap gap-3">
+    <div>
+      <span class="page-header-eyebrow">Experience &amp; Skills</span>
+      <h1 class="page-header-title">Resume</h1>
+    </div>
+    {% if site_settings and site_settings.resume_pdf %}
+    <a href="{{ site_settings.resume_pdf.url }}" class="btn-primary-custom" style="font-size:0.72rem" download><i class="bi bi-download me-2"></i>Download PDF</a>
+    {% else %}
+    <span class="btn-primary-custom" style="font-size:0.72rem;opacity:0.4;cursor:default"><i class="bi bi-download me-2"></i>Download PDF</span>
+    {% endif %}
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--cream)">
+  <div class="container">
+    <div class="row g-5">
+
+      <!-- Experience & Education — order driven by min 'order' field in DB -->
+      <div class="col-lg-10 offset-lg-1">
+
+        {% if experience_first %}
+
+          {% if experiences %}
+          <div style="margin-bottom:8px">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Professional Experience</div>
+            <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
+          </div>
+          {% for exp in experiences %}
+          <div class="resume-entry" {% if forloop.first %}style="padding-top:8px"{% endif %}>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.05rem;color:#2C2C2C">{{ exp.organization }}{% if exp.location %} — {{ exp.location }}{% endif %}</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;white-space:nowrap">{% if exp.start_date %}{{ exp.start_date }}{% endif %}{% if exp.start_date and exp.end_date %} — {% endif %}{{ exp.end_date }}</span>
+            </div>
+            <div style="margin-bottom:8px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1rem;color:#2C2C2C">{{ exp.title }}</span>
+            </div>
+            {% if exp.description %}<div class="resume-desc" style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#5C5753;line-height:1.8">{{ exp.description }}</div>{% endif %}
+          </div>
+          {% endfor %}
+          {% endif %}
+
+          {% if education %}
+          <div style="margin-bottom:8px;{% if experiences %}margin-top:40px;{% endif %}">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Education</div>
+            <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
+          </div>
+          {% for edu in education %}
+          <div class="resume-entry" {% if forloop.first %}style="padding-top:8px"{% endif %}>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.05rem;color:#2C2C2C">{{ edu.organization }}{% if edu.location %} — {{ edu.location }}{% endif %}</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;white-space:nowrap">{% if edu.start_date %}{{ edu.start_date }}{% endif %}{% if edu.start_date and edu.end_date %} — {% endif %}{{ edu.end_date }}</span>
+            </div>
+            <div style="margin-bottom:{% if edu.gpa_honors %}4px{% else %}8px{% endif %}">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1rem;color:#2C2C2C">{% if edu.degree_major %}{{ edu.degree_major }}{% else %}{{ edu.title }}{% endif %}</span>
+            </div>
+            {% if edu.gpa_honors %}<div style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;margin-bottom:8px">{{ edu.gpa_honors }}</div>{% endif %}
+            {% if edu.description %}<div class="resume-desc" style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#5C5753;line-height:1.8">{{ edu.description }}</div>{% endif %}
+          </div>
+          {% endfor %}
+          {% endif %}
+
+        {% else %}
+
+          {% if education %}
+          <div style="margin-bottom:8px">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Education</div>
+            <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
+          </div>
+          {% for edu in education %}
+          <div class="resume-entry" {% if forloop.first %}style="padding-top:8px"{% endif %}>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.05rem;color:#2C2C2C">{{ edu.organization }}{% if edu.location %} — {{ edu.location }}{% endif %}</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;white-space:nowrap">{% if edu.start_date %}{{ edu.start_date }}{% endif %}{% if edu.start_date and edu.end_date %} — {% endif %}{{ edu.end_date }}</span>
+            </div>
+            <div style="margin-bottom:{% if edu.gpa_honors %}4px{% else %}8px{% endif %}">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1rem;color:#2C2C2C">{% if edu.degree_major %}{{ edu.degree_major }}{% else %}{{ edu.title }}{% endif %}</span>
+            </div>
+            {% if edu.gpa_honors %}<div style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;margin-bottom:8px">{{ edu.gpa_honors }}</div>{% endif %}
+            {% if edu.description %}<div class="resume-desc" style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#5C5753;line-height:1.8">{{ edu.description }}</div>{% endif %}
+          </div>
+          {% endfor %}
+          {% endif %}
+
+          {% if experiences %}
+          <div style="margin-bottom:8px;{% if education %}margin-top:40px;{% endif %}">
+            <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Professional Experience</div>
+            <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
+          </div>
+          {% for exp in experiences %}
+          <div class="resume-entry" {% if forloop.first %}style="padding-top:8px"{% endif %}>
+            <div style="display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:4px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1.05rem;color:#2C2C2C">{{ exp.organization }}{% if exp.location %} — {{ exp.location }}{% endif %}</span>
+              <span style="font-family:'DM Sans',sans-serif;font-size:0.8rem;color:#7A756F;white-space:nowrap">{% if exp.start_date %}{{ exp.start_date }}{% endif %}{% if exp.start_date and exp.end_date %} — {% endif %}{{ exp.end_date }}</span>
+            </div>
+            <div style="margin-bottom:8px">
+              <span style="font-family:'Cormorant Garamond',serif;font-weight:400;font-size:1rem;color:#2C2C2C">{{ exp.title }}</span>
+            </div>
+            {% if exp.description %}<div class="resume-desc" style="font-family:'DM Sans',sans-serif;font-size:0.875rem;color:#5C5753;line-height:1.8">{{ exp.description }}</div>{% endif %}
+          </div>
+          {% endfor %}
+          {% endif %}
+
+        {% endif %}
+
+        {% if not experiences and not education %}
+        <div style="background:var(--white);border:1px solid var(--border);padding:40px;text-align:center;color:var(--charcoal-lt)">
+          <i class="bi bi-file-earmark-person" style="font-size:2rem;opacity:0.3"></i>
+          <p class="mt-3 mb-0" style="font-size:0.9rem">Add your experience and education through the Django admin panel.</p>
+        </div>
+        {% endif %}
+
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.querySelectorAll('.resume-desc').forEach(function(el) {
+    var rawLines = el.textContent.trim().split('\n').filter(function(l) { return l.trim(); });
+    if (rawLines.length === 0) return;
+    var bullets = [];
+    rawLines.forEach(function(line) {
+      if (/^[-•]/.test(line.trim()) || bullets.length === 0) {
+        bullets.push(line.trim());
+      } else {
+        bullets[bullets.length - 1] += ' ' + line.trim();
+      }
+    });
+    var ul = document.createElement('ul');
+    ul.style.cssText = 'margin:0;padding-left:20px;';
+    bullets.forEach(function(line) {
+      var li = document.createElement('li');
+      li.textContent = line.replace(/^[-•]\s*/, '').trim();
+      ul.appendChild(li);
+    });
+    el.innerHTML = '';
+    el.appendChild(ul);
+  });
+</script>
+{% endblock %}

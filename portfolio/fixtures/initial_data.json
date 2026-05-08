@@ -1,0 +1,183 @@
+[
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Chatbot Project",
+      "summary": "An AI-powered chatbot built to answer questions and hold natural conversations.",
+      "business_problem": "Business problem description coming soon. Update this through the Django admin panel.",
+      "description": "Project description coming soon. Explain what the chatbot does, how it works, and what it was built for. Update this through the Django admin panel.",
+      "category": "chatbot",
+      "tools_used": "Python, OpenAI API, Django",
+      "key_features": "Key features coming soon. Describe what makes this chatbot unique — things like conversation memory, custom prompts, or topic focus. Update this through the Django admin panel.",
+      "role": "Your role and contribution coming soon. Update this through the Django admin panel.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 1,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "n8n Agent Workflow Project",
+      "summary": "An automated workflow agent built with n8n to streamline a real-world process.",
+      "business_problem": "Business problem description coming soon. Update this through the Django admin panel.",
+      "description": "Project description coming soon. Explain what the n8n workflow automates, what triggers it, and what it produces. Update this through the Django admin panel.",
+      "category": "workflow",
+      "tools_used": "n8n, REST APIs, Webhooks",
+      "key_features": "Key features coming soon. Describe the workflow steps, integrations, and what it automates. Update this through the Django admin panel.",
+      "role": "Your role and contribution coming soon. Update this through the Django admin panel.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 2,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "LangChain Agent Project",
+      "summary": "A LangChain-powered AI agent that can reason, use tools, and complete multi-step tasks.",
+      "business_problem": "Business problem description coming soon. Update this through the Django admin panel.",
+      "description": "Project description coming soon. Explain what the LangChain agent does, what tools it uses, and how it reasons through tasks. Update this through the Django admin panel.",
+      "category": "agent",
+      "tools_used": "Python, LangChain, OpenAI API",
+      "key_features": "Key features coming soon. Describe the agent's tools, chains, and reasoning abilities. Update this through the Django admin panel.",
+      "role": "Your role and contribution coming soon. Update this through the Django admin panel.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 3,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 4,
+    "fields": {
+      "title": "Google AI Studio Media Project",
+      "summary": "A media project built using Google AI Studio to generate or analyze visual and audio content.",
+      "business_problem": "Business problem description coming soon. Update this through the Django admin panel.",
+      "description": "Project description coming soon. Explain what was created using Google AI Studio, what media type was involved, and the outcome. Update this through the Django admin panel.",
+      "category": "media",
+      "tools_used": "Google AI Studio, Gemini API, Python",
+      "key_features": "Key features coming soon. Describe what the project generates, analyzes, or produces. Update this through the Django admin panel.",
+      "role": "Your role and contribution coming soon. Update this through the Django admin panel.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 4,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 5,
+    "fields": {
+      "title": "Machine Learning Project (scikit-learn)",
+      "summary": "A machine learning model trained with scikit-learn to classify, predict, or analyze a dataset.",
+      "business_problem": "Business problem description coming soon. Update this through the Django admin panel.",
+      "description": "Project description coming soon. Explain the dataset, the ML model used, and what it predicts or classifies. Update this through the Django admin panel.",
+      "category": "ml",
+      "tools_used": "Python, scikit-learn, pandas, matplotlib",
+      "key_features": "Key features coming soon. Describe the model type, accuracy, and what insights it produces. Update this through the Django admin panel.",
+      "role": "Your role and contribution coming soon. Update this through the Django admin panel.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 5,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 6,
+    "fields": {
+      "title": "Campus SkillSwap — Django Project",
+      "summary": "A full-stack Django marketplace where students can post and discover skills to swap with each other.",
+      "business_problem": "Students often have skills that others need but lack a structured way to exchange them without money. Campus SkillSwap solves this by creating a peer-to-peer skill marketplace.",
+      "description": "Campus SkillSwap is a full-stack web application built with Django and SQLite. Students can create accounts, post skills they offer, browse available skills, and connect with other students. Update this with more detail through the Django admin panel.",
+      "category": "web",
+      "tools_used": "Python, Django, SQLite, Bootstrap, HTML, CSS",
+      "key_features": "User authentication (register/login/logout), skill post creation and management, skill browsing and search, user dashboard, Django admin, Bootstrap styling.",
+      "role": "Full-stack developer — designed models, views, templates, URLs, authentication, and admin configuration.",
+      "challenges": "Biggest challenge description coming soon. Update this through the Django admin panel.",
+      "lessons_learned": "Lessons learned coming soon. Update this through the Django admin panel.",
+      "image": "",
+      "github_link": null,
+      "demo_link": null,
+      "order": 6,
+      "created_at": "2025-01-01T00:00:00Z"
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": { "name": "Python", "category": "ai", "proficiency": 85, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 2,
+    "fields": { "name": "LangChain", "category": "ai", "proficiency": 75, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 3,
+    "fields": { "name": "OpenAI API", "category": "ai", "proficiency": 80, "order": 3 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 4,
+    "fields": { "name": "scikit-learn", "category": "ai", "proficiency": 70, "order": 4 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 5,
+    "fields": { "name": "Django", "category": "web", "proficiency": 80, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 6,
+    "fields": { "name": "HTML & CSS", "category": "web", "proficiency": 85, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 7,
+    "fields": { "name": "Bootstrap", "category": "web", "proficiency": 80, "order": 3 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 8,
+    "fields": { "name": "pandas", "category": "data", "proficiency": 75, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 9,
+    "fields": { "name": "n8n", "category": "tools", "proficiency": 75, "order": 1 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 10,
+    "fields": { "name": "Google AI Studio", "category": "tools", "proficiency": 70, "order": 2 }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 11,
+    "fields": { "name": "Git & GitHub", "category": "tools", "proficiency": 75, "order": 3 }
+  }
+]

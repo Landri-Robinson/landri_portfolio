@@ -1,0 +1,82 @@
+{% extends 'portfolio/base.html' %}
+{% block title %}Skills — Landri Robinson{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div class="container">
+    <span class="page-header-eyebrow">What I Know</span>
+    <h1 class="page-header-title">Skills</h1>
+    <p class="page-header-sub">A breakdown of my technical skills and the tools I work with.</p>
+  </div>
+</div>
+
+<section class="section-pad" style="background:var(--slate-pale)">
+  <div class="container">
+    <div class="row g-5">
+
+      {% if ai_skills %}
+      <div class="col-md-6">
+        <div class="skill-card" style="background:var(--white);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:28px">
+          <div class="skill-category-title"><i class="bi bi-robot me-2"></i>AI &amp; Machine Learning</div>
+          {% for skill in ai_skills %}
+          <div style="padding:8px 0;border-bottom:1px solid rgba(74,92,104,0.15);font-size:0.9rem;color:var(--charcoal)">{{ skill.name }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if web_skills %}
+      <div class="col-md-6">
+        <div class="skill-card" style="background:var(--white);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:28px">
+          <div class="skill-category-title"><i class="bi bi-code-slash me-2"></i>Web Development</div>
+          {% for skill in web_skills %}
+          <div style="padding:8px 0;border-bottom:1px solid rgba(74,92,104,0.15);font-size:0.9rem;color:var(--charcoal)">{{ skill.name }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if data_skills %}
+      <div class="col-md-6">
+        <div class="skill-card" style="background:var(--white);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:28px">
+          <div class="skill-category-title"><i class="bi bi-bar-chart me-2"></i>Data &amp; Analytics</div>
+          {% for skill in data_skills %}
+          <div style="padding:8px 0;border-bottom:1px solid rgba(74,92,104,0.15);font-size:0.9rem;color:var(--charcoal)">{{ skill.name }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+      {% if tool_skills %}
+      <div class="col-md-6">
+        <div class="skill-card" style="background:var(--white);border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.06);padding:28px">
+          <div class="skill-category-title"><i class="bi bi-tools me-2"></i>Tools &amp; Platforms</div>
+          {% for skill in tool_skills %}
+          <div style="padding:8px 0;border-bottom:1px solid rgba(74,92,104,0.15);font-size:0.9rem;color:var(--charcoal)">{{ skill.name }}</div>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.skill-card').forEach(function(el, i) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(16px)';
+      el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+      setTimeout(function() {
+        el.style.opacity = '1';
+        el.style.transform = 'translateY(0)';
+      }, 80 + i * 120);
+    });
+  });
+</script>
+{% endblock %}

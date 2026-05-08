@@ -1,0 +1,76 @@
+=========================================
+LANDRI ROBINSON — CHATBOT TRAINING CONTENT
+=========================================
+
+--- ABOUT ---
+Heading: Building With Intention, Designing for Trust
+Tagline: Problem-solver with a passion for AI and intelligent systems.
+Bio: Hi, I'm Landri Robinson. I'm passionate about artificial intelligence and what it means to build it responsibly. I'm drawn to the intersection of AI development and ethical design: building systems that are transparent, auditable, and calibrated to the people who rely on them. I believe AI is most powerful when it helps organizations not just automate, but genuinely understand and interrogate their own data
+
+--- SKILLS ---
+AI & Machine Learning: Python, LangChain, OpenAI API, scikit-learn
+Web Development: Django, HTML & CSS, Bootstrap
+Data & Analytics: pandas
+Tools & Platforms: SQLite, HTML, Gemini, CO-STAR prompting method, Google Gemini API, Google Sheets API, Google Calendar API, OAuth 2.0, matplotlib, numpy, seaborn, JavaScript, Webhooks, REST APIs, WorldTimeAPI, Chatbase, n8n, Google AI Studio, Git & GitHub
+
+--- PROJECTS ---
+
+== Campus SkillSwap — Django Project ==
+Category: Web Development
+Summary: A full-stack Django marketplace where students can post and discover skills to swap with each other.
+Business Problem: Students on college campuses often have valuable skills to share but no easy way to connect with peers who need them. Campus SkillSwap solves this by creating a peer-to-peer skill marketplace where students can post what they offer and find what they need.
+Tools Used: Python, Django, SQLite, Bootstrap, HTML
+Key Features: User authentication including register, login, and logout. Students can create, edit, and delete their own skill posts. Anyone can browse all available skills without logging in. Individual skill detail pages with full descriptions. A personal dashboard showing each user's own posts. Search functionality to filter skills by title or category. Built-in messaging system for students to communicate directly with each other. Django admin panel for managing all content.
+Role: Built the entire application from scratch including project and app setup, Django models, forms, views, URLs, templates, and authentication. Designed the database structure, implemented CRUD functionality, and added search and Bootstrap styling.
+Challenges: Designing and implementing the permission logic throughout the app. This included ensuring users cannot leave a review unless they have worked with that person, and restricting messaging to logged in users only. Thinking through all the different user scenarios and making sure the right restrictions were in place across the application.
+Lessons Learned: Gained hands-on experience with Django's full MVT architecture by building a complete application from scratch using AI-assisted development. Learned how to think through user flows and permission logic before building, how to connect models, views, and templates, and how to implement user authentication and CRUD functionality. Also learned how to effectively use AI tools to scaffold and build a real-world web application.
+
+== Chatbot Project ==
+Category: Chatbot
+Summary: An AI-powered chatbot built using Chatbase and trained on personal portfolio content to answer questions about projects, skills, and experience.
+Business Problem: Portfolio visitors often have questions about specific projects or skills but no easy way to get quick answers. This chatbot provides an interactive way for visitors to ask questions and get instant responses about the portfolio content.
+Tools Used: Chatbase, OpenAI API
+Key Features: Trained on personal portfolio content including all project descriptions, skills, and bio information. Embedded directly into the portfolio website as a chat widget. Answers visitor questions about projects, tools used, and experience in real time.
+Role: Built and trained the chatbot using Chatbase, curated and formatted all training content from the portfolio, and embedded it into the Django portfolio website.
+Challenges: Curating and formatting the training content so the chatbot could accurately answer specific questions about each project without giving incorrect or incomplete responses.
+Lessons Learned: How to train and deploy a custom AI chatbot using a no-code platform, how to structure training content for accurate responses, and how to embed a chatbot widget into a live web application.
+
+== Google AI Studio Media Project ==
+Category: AI Media
+Summary: Built AI marketing campaign using Google AI Studio and prompt engineering to generate all promotional visuals.
+Business Problem: Marketing teams need high-quality visuals to pitch products to buyers and stakeholders, but professional production is costly and time-consuming. This project demonstrated how AI image generation, guided by precise prompt engineering, can produce professional-grade marketing materials quickly and without a traditional creative team.
+Tools Used: Google AI Studio, Gemini, CO-STAR prompting method
+Key Features: Developed a fictional product concept including name, description, target audience, and unique selling proposition. Created a full marketing campaign using only AI-generated images. Wrote detailed CO-STAR prompts for each visual to control lighting, style, composition, and mood. Produced a magazine cover featuring a team member modeling the product. Created social media promotional posts tied to a real upcoming event. Designed an AI-generated team photo with a creative and professional concept.
+Role: Responsible for writing and refining the AI prompts used throughout the project. Applied the CO-STAR method to craft detailed, specific prompts for each marketing visual, directing the AI on style, lighting, composition, mood, and specific visual elements to achieve professional-grade outputs. Contributed to the AI image generation process across all campaign materials.
+Challenges: Getting AI to generate images that matched the exact creative vision. The model would often interpret prompts differently than expected, requiring multiple rounds of prompt refinement to achieve the desired output. Maintaining visual consistency across all campaign materials was also challenging, as small prompt changes could produce noticeably different styles, lighting, and aesthetics between images.
+Lessons Learned: How to write precise and detailed AI prompts using the CO-STAR method to better control image outputs. Learned that small changes in wording can significantly affect the visual result, and that getting a specific outcome requires iteration and patience. Also learned the importance of establishing a consistent prompt structure early on to maintain visual cohesion across a full campaign.
+
+== LangChain Agent Project — Handyman Booking Assistant ==
+Category: AI Agent
+Summary: A LangChain-powered AI agent that automates the full customer service flow for a handyman business, from generating price estimates to booking appointments on Google Calendar.
+Business Problem: Small service businesses spend significant time manually handling customer inquiries, calculating estimates, and scheduling appointments. This project demonstrates how an AI agent with real tool integrations can automate that entire process in a single conversational flow.
+Tools Used: Python, LangChain, Google Gemini API, Google Sheets API, Google Calendar API, OAuth 2.0
+Key Features: Multi-turn conversation flow that remembers context across the entire interaction. Pricing tool that reads live data from a Google Sheet to calculate estimates based on service type, urgency, and complexity. Scheduling tool that checks real Google Calendar availability and returns available time slots. Booking tool that creates a confirmed calendar event once the customer selects a slot. Full end-to-end automation from customer request to confirmed appointment.
+Role: Configured and connected personal Google Cloud resources including a custom Google Sheet with pricing data and a personal Google Calendar. Generated all required credential files, tested each tool individually before running the full agent, and customized the assistant's tone and business logic for the handyman scenario.
+Challenges: Getting the AI to consistently calculate the correct price based on the service type, urgency, and complexity multipliers, and ensuring the scheduling tool returned accurate available time slots from Google Calendar without errors.
+Lessons Learned: How LangChain agents use tools to interact with external services. How to connect and authenticate with Google Cloud APIs using service accounts and OAuth credentials. How to test individual tools before integrating them into a full agent, and how to manage multi-turn conversation history so the AI maintains context across multiple exchanges.
+
+== Machine Learning Project (scikit-learn) ==
+Category: Machine Learning
+Summary: A set of Python machine learning scripts using scikit-learn to build classification and regression models across three real-world datasets.
+Business Problem: Organizations across industries need reliable ways to predict outcomes from data, whether that is identifying disease risk, recognizing patterns, or estimating property values. This project demonstrates how machine learning models can be applied to real datasets to solve these kinds of prediction and classification problems efficiently.
+Tools Used: Python, scikit-learn, matplotlib, numpy, pandas, seaborn
+Key Features: K-Nearest Neighbors classification on the Iris dataset to predict flower species with accuracy scoring, wrong prediction identification, and confusion matrix heatmap visualization. Linear regression on the diabetes dataset using blood sugar levels to predict disease progression with coefficient and intercept analysis and a scatterplot with a regression line. Multi-feature linear regression on the Auto MPG dataset predicting car fuel efficiency from vehicle specifications including cylinders, displacement, horsepower, and weight. K-Nearest Neighbors classification on the digits dataset to recognize and classify handwritten numbers 0 through 9 with image grid visualization and confusion matrix evaluation. Linear regression on the California Housing dataset predicting median home values from neighborhood features with per-feature coefficient analysis and actual versus predicted value comparison. Train and test splitting across all models for proper evaluation and performance measurement.
+Role: Wrote Python scripts to load and prepare datasets, build and train classification and regression models, evaluate model accuracy, visualize results using scatterplots and confusion matrix heatmaps, and compare actual versus predicted values across multiple datasets.
+Challenges: Interpreting and translating model outputs, moving from raw numeric predictions to meaningful labels and visualizations that actually communicate what the model learned.
+Lessons Learned: How visualization helps communicate what a model learned, and how to work with real datasets that have messy or missing data. Also gained a deeper understanding of how classification and regression models work differently and how to evaluate model performance beyond just accuracy.
+
+== n8n Agent Workflow Project ==
+Category: Workflow Automation
+Summary: An automated workflow agent built with n8n to streamline a real-world process.
+Business Problem: Small handyman businesses spend significant time manually handling customer inquiries, generating estimates, finding available time slots, and sending confirmation messages. This workflow automates the entire process so a customer message triggers all of that automatically.
+Tools Used: n8n, Google Gemini API, JavaScript, Webhooks, REST APIs, WorldTimeAPI
+Key Features: Five connected workflows — Intake Agent (extracts job details from customer messages using Gemini), Pricing Agent (calculates estimates using rules-based JavaScript), Scheduling Agent (pulls available time slots using an external API), Communications Agent (drafts a confirmation email using Gemini), and an Orchestrator that calls all four agents and returns a final business-ready output.
+Role: Designed and built all five workflows from scratch using n8n's drag-and-drop interface, configured Gemini API prompts, wrote JavaScript logic for pricing and scheduling, and connected all agents through the Orchestrator.
+Challenges: Getting Gemini to consistently output all the required fields in the correct format. The model would sometimes return incomplete or incorrectly structured responses, which required careful prompt engineering to fix.
+Lessons Learned: How to design multi-agent systems where specialized agents handle one task each, how to prompt AI models for structured JSON output, and how to connect external APIs and AI within automated workflows.
