@@ -1,513 +1,513 @@
 [
-{
-  "model": "portfolio.project",
-  "pk": 1,
-  "fields": {
-    "title": "Chatbot Project",
-    "summary": "An AI-powered chatbot built using Chatbase and trained on personal portfolio content to answer questions about projects, skills, and experience.",
-    "description": "This project involved building and deploying a custom AI chatbot using Chatbase and embedding it directly into the portfolio website. The chatbot was trained on all portfolio content including project descriptions, skills, tools, and bio information so it can answer visitor questions in real time. Training content was carefully curated and formatted to ensure the chatbot could accurately respond to specific questions about each project and technical background. The chatbot is accessible on every page of the portfolio as a floating chat widget, giving visitors an interactive way to learn more without having to read through every page manually",
-    "category": "chatbot",
-    "tools_used": "Chatbase, OpenAI API",
-    "business_problem": "Portfolio visitors often have questions about specific projects or skills but no easy way to get quick answers. This chatbot provides an interactive way for visitors to ask questions and get instant responses about the portfolio content.",
-    "key_features": "Trained on personal portfolio content including all project descriptions, skills, and bio information. Embedded directly into the portfolio website as a chat widget. Answers visitor questions about projects, tools used, and experience in real time.",
-    "role": "Built and trained the chatbot using Chatbase, curated and formatted all training content from the portfolio, and embedded it into the Django portfolio website.",
-    "challenges": "Curating and formatting the training content so the chatbot could accurately answer specific questions about each project without giving incorrect or incomplete responses.",
-    "lessons_learned": "How to train and deploy a custom AI chatbot using a no-code platform, how to structure training content for accurate responses, and how to embed a chatbot widget into a live web application.",
-    "image": "",
-    "links": null,
-    "github_link": null,
-    "demo_link": null
+  {
+    "model": "portfolio.project",
+    "pk": 1,
+    "fields": {
+      "title": "Chatbot Project",
+      "summary": "An AI-powered chatbot built using Chatbase and trained on personal portfolio content to answer questions about projects, skills, and experience.",
+      "description": "This project involved building and deploying a custom AI chatbot using Chatbase and embedding it directly into the portfolio website. The chatbot was trained on all portfolio content including project descriptions, skills, tools, and bio information so it can answer visitor questions in real time. Training content was carefully curated and formatted to ensure the chatbot could accurately respond to specific questions about each project and technical background. The chatbot is accessible on every page of the portfolio as a floating chat widget, giving visitors an interactive way to learn more without having to read through every page manually",
+      "category": "chatbot",
+      "tools_used": "Chatbase, OpenAI API",
+      "business_problem": "Portfolio visitors often have questions about specific projects or skills but no easy way to get quick answers. This chatbot provides an interactive way for visitors to ask questions and get instant responses about the portfolio content.",
+      "key_features": "Trained on personal portfolio content including all project descriptions, skills, and bio information. Embedded directly into the portfolio website as a chat widget. Answers visitor questions about projects, tools used, and experience in real time.",
+      "role": "Built and trained the chatbot using Chatbase, curated and formatted all training content from the portfolio, and embedded it into the Django portfolio website.",
+      "challenges": "Curating and formatting the training content so the chatbot could accurately answer specific questions about each project without giving incorrect or incomplete responses.",
+      "lessons_learned": "How to train and deploy a custom AI chatbot using a no-code platform, how to structure training content for accurate responses, and how to embed a chatbot widget into a live web application.",
+      "image": "",
+      "links": null,
+      "github_link": null,
+      "demo_link": null
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 2,
+    "fields": {
+      "title": "n8n Agent Workflow Project",
+      "summary": "An automated workflow agent built with n8n to streamline a real-world process.",
+      "description": "A multi-agent automation system built in n8n that handles the full workflow for a handyman business â€” from customer intake to pricing, scheduling, and sending a confirmation email.",
+      "category": "workflow",
+      "tools_used": "n8n, Google Gemini API, JavaScript, Webhooks, REST APIs, WorldTimeAPI",
+      "business_problem": "Small handyman businesses spend significant time manually handling customer inquiries, generating estimates, finding available time slots, and sending confirmation messages. This workflow automates the entire process so a customer message triggers all of that automatically.",
+      "key_features": "Five connected workflows â€” Intake Agent (extracts job details from customer messages using Gemini), Pricing Agent (calculates estimates using rules-based JavaScript), Scheduling Agent (pulls available time slots using an external API), Communications Agent (drafts a confirmation email using Gemini), and an Orchestrator that calls all four agents and returns a final business-ready output.",
+      "role": "Designed and built all five workflows from scratch using n8n's drag-and-drop interface, configured Gemini API prompts, wrote JavaScript logic for pricing and scheduling, and connected all agents through the Orchestrator.",
+      "challenges": "Getting Gemini to consistently output all the required fields in the correct format. The model would sometimes return incomplete or incorrectly structured responses, which required careful prompt engineering to fix.",
+      "lessons_learned": "How to design multi-agent systems where specialized agents handle one task each, how to prompt AI models for structured JSON output, and how to connect external APIs and AI within automated workflows.",
+      "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2.png",
+      "links": null,
+      "github_link": null,
+      "demo_link": null
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 3,
+    "fields": {
+      "title": "LangChain Agent Project â€” Handyman Booking Assistant",
+      "summary": "A LangChain-powered AI agent that automates the full customer service flow for a handyman business, from generating price estimates to booking appointments on Google Calendar.",
+      "description": "This project uses LangChain and Google Gemini to build a conversational AI agent that can handle real customer service requests end to end. The agent connects to a live Google Sheet to pull pricing data, checks Google Calendar for available time slots, and creates confirmed bookings once the customer selects an appointment. The conversation is multi-turn, meaning the agent remembers context across the entire interaction and guides the customer from their initial request all the way through to a confirmed calendar event. The project was built by cloning a starter architecture and customizing it with personal Google Cloud credentials, a custom pricing sheet, and business-specific prompts tailored to the handyman service scenario.",
+      "category": "agent",
+      "tools_used": "Python, LangChain, Google Gemini API, Google Sheets API, Google Calendar API, OAuth 2.0",
+      "business_problem": "Small service businesses spend significant time manually handling customer inquiries, calculating estimates, and scheduling appointments. This project demonstrates how an AI agent with real tool integrations can automate that entire process in a single conversational flow.",
+      "key_features": "Multi-turn conversation flow that remembers context across the entire interaction. Pricing tool that reads live data from a Google Sheet to calculate estimates based on service type, urgency, and complexity. Scheduling tool that checks real Google Calendar availability and returns available time slots. Booking tool that creates a confirmed calendar event once the customer selects a slot. Full end-to-end automation from customer request to confirmed appointment.",
+      "role": "Configured and connected personal Google Cloud resources including a custom Google Sheet with pricing data and a personal Google Calendar. Generated all required credential files, tested each tool individually before running the full agent, and customized the assistant's tone and business logic for the handyman scenario.",
+      "challenges": "Getting the AI to consistently calculate the correct price based on the service type, urgency, and complexity multipliers, and ensuring the scheduling tool returned accurate available time slots from Google Calendar without errors.",
+      "lessons_learned": "How LangChain agents use tools to interact with external services. How to connect and authenticate with Google Cloud APIs using service accounts and OAuth credentials. How to test individual tools before integrating them into a full agent, and how to manage multi-turn conversation history so the AI maintains context across multiple exchanges.",
+      "image": "",
+      "links": null,
+      "github_link": "https://github.com/Landri-Robinson/HandyMan",
+      "demo_link": null
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 4,
+    "fields": {
+      "title": "Google AI Studio Media Project",
+      "summary": "Built AI marketing campaign using Google AI Studio and prompt engineering to generate all promotional visuals.",
+      "description": "As a team, utilized advanced AI prompt engineering through the CO-STAR method to generate a full marketing campaign for a product my team and I created, the ACE Suit, a fictional military exoskeleton, including social media posts, a magazine cover, and promotional materials using Google AI Studio.",
+      "category": "media",
+      "tools_used": "Google AI Studio, Gemini, CO-STAR prompting method",
+      "business_problem": "Marketing teams need high-quality visuals to pitch products to buyers and stakeholders, but professional production is costly and time-consuming. This project demonstrated how AI image generation, guided by precise prompt engineering, can produce professional-grade marketing materials quickly and without a traditional creative team.",
+      "key_features": "Developed a fictional product concept including name, description, target audience, and unique selling proposition. Created a full marketing campaign using only AI-generated images. Wrote detailed CO-STAR prompts for each visual to control lighting, style, composition, and mood. Produced a magazine cover featuring a team member modeling the product. Created social media promotional posts tied to a real upcoming event. Designed an AI-generated team photo with a creative and professional concept.",
+      "role": "Responsible for writing and refining the AI prompts used throughout the project. Applied the CO-STAR method to craft detailed, specific prompts for each marketing visual, directing the AI on style, lighting, composition, mood, and specific visual elements to achieve professional-grade outputs. Contributed to the AI image generation process across all campaign materials.",
+      "challenges": "Getting AI to generate images that matched the exact creative vision. The model would often interpret prompts differently than expected, requiring multiple rounds of prompt refinement to achieve the desired output. Maintaining visual consistency across all campaign materials was also challenging, as small prompt changes could produce noticeably different styles, lighting, and aesthetics between images.",
+      "lessons_learned": "How to write precise and detailed AI prompts using the CO-STAR method to better control image outputs. Learned that small changes in wording can significantly affect the visual result, and that getting a specific outcome requires iteration and patience. Also learned the importance of establishing a consistent prompt structure early on to maintain visual cohesion across a full campaign.",
+      "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2_Tbu7wNw.png",
+      "links": null,
+      "github_link": null,
+      "demo_link": null
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 5,
+    "fields": {
+      "title": "Machine Learning Project (scikit-learn)",
+      "summary": "A set of Python machine learning scripts using scikit-learn to build classification and regression models across three real-world datasets.",
+      "description": "This project explores machine learning fundamentals by applying classification and regression algorithms to five real-world datasets using scikit-learn. Models were built to predict outcomes ranging from flower species and handwritten digit recognition to disease progression, car fuel efficiency, and California home prices. Each script includes data preparation, model training, accuracy evaluation, and data visualization to communicate what the model learned.",
+      "category": "ml",
+      "tools_used": "Python, scikit-learn, matplotlib, numpy, pandas, seaborn",
+      "business_problem": "Organizations across industries need reliable ways to predict outcomes from data, whether that is identifying disease risk, recognizing patterns, or estimating property values. This project demonstrates how machine learning models can be applied to real datasets to solve these kinds of prediction and classification problems efficiently.",
+      "key_features": "K-Nearest Neighbors classification on the Iris dataset to predict flower species with accuracy scoring, wrong prediction identification, and confusion matrix heatmap visualization. Linear regression on the diabetes dataset using blood sugar levels to predict disease progression with coefficient and intercept analysis and a scatterplot with a regression line. Multi-feature linear regression on the Auto MPG dataset predicting car fuel efficiency from vehicle specifications including cylinders, displacement, horsepower, and weight. K-Nearest Neighbors classification on the digits dataset to recognize and classify handwritten numbers 0 through 9 with image grid visualization and confusion matrix evaluation. Linear regression on the California Housing dataset predicting median home values from neighborhood features with per-feature coefficient analysis and actual versus predicted value comparison. Train and test splitting across all models for proper evaluation and performance measurement.",
+      "role": "Wrote Python scripts to load and prepare datasets, build and train classification and regression models, evaluate model accuracy, visualize results using scatterplots and confusion matrix heatmaps, and compare actual versus predicted values across multiple datasets.",
+      "challenges": "Interpreting and translating model outputs, moving from raw numeric predictions to meaningful labels and visualizations that actually communicate what the model learned.",
+      "lessons_learned": "How visualization helps communicate what a model learned, and how to work with real datasets that have messy or missing data. Also gained a deeper understanding of how classification and regression models work differently and how to evaluate model performance beyond just accuracy.",
+      "image": "",
+      "links": null,
+      "github_link": "https://github.com/Landri-Robinson/Machine-Learning-Project-",
+      "demo_link": null
+    }
+  },
+  {
+    "model": "portfolio.project",
+    "pk": 6,
+    "fields": {
+      "title": "Campus SkillSwap â€” Django Project",
+      "summary": "A full-stack Django marketplace where students can post and discover skills to swap with each other.",
+      "description": "A full-stack Django marketplace where students can create accounts, post skills they offer, and browse or search for skills from other students.",
+      "category": "web",
+      "tools_used": "Python, Django, SQLite, Bootstrap, HTML",
+      "business_problem": "Students on college campuses often have valuable skills to share but no easy way to connect with peers who need them. Campus SkillSwap solves this by creating a peer-to-peer skill marketplace where students can post what they offer and find what they need.",
+      "key_features": "User authentication including register, login, and logout. Students can create, edit, and delete their own skill posts. Anyone can browse all available skills without logging in. Individual skill detail pages with full descriptions. A personal dashboard showing each user's own posts. Search functionality to filter skills by title or category. Built-in messaging system for students to communicate directly with each other. Django admin panel for managing all content.",
+      "role": "Built the entire application from scratch including project and app setup, Django models, forms, views, URLs, templates, and authentication. Designed the database structure, implemented CRUD functionality, and added search and Bootstrap styling.",
+      "challenges": "Designing and implementing the permission logic throughout the app. This included ensuring users cannot leave a review unless they have worked with that person, and restricting messaging to logged in users only. Thinking through all the different user scenarios and making sure the right restrictions were in place across the application.",
+      "lessons_learned": "Gained hands-on experience with Django's full MVT architecture by building a complete application from scratch using AI-assisted development. Learned how to think through user flows and permission logic before building, how to connect models, views, and templates, and how to implement user authentication and CRUD functionality. Also learned how to effectively use AI tools to scaffold and build a real-world web application.",
+      "image": "projects/campus_skills_swap_TTdjaq0.png",
+      "links": null,
+      "github_link": "https://github.com/Landri-Robinson/campus-skillswap",
+      "demo_link": "https://campus-skillswap.onrender.com/skill/3/"
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 1,
+    "fields": {
+      "name": "Python",
+      "category": "ai",
+      "proficiency": 85,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 2,
+    "fields": {
+      "name": "LangChain",
+      "category": "ai",
+      "proficiency": 75,
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 3,
+    "fields": {
+      "name": "OpenAI API",
+      "category": "ai",
+      "proficiency": 80,
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 4,
+    "fields": {
+      "name": "scikit-learn",
+      "category": "ai",
+      "proficiency": 70,
+      "order": 4
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 5,
+    "fields": {
+      "name": "Django",
+      "category": "web",
+      "proficiency": 80,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 6,
+    "fields": {
+      "name": "HTML & CSS",
+      "category": "web",
+      "proficiency": 85,
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 7,
+    "fields": {
+      "name": "Bootstrap",
+      "category": "web",
+      "proficiency": 80,
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 8,
+    "fields": {
+      "name": "pandas",
+      "category": "data",
+      "proficiency": 75,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 9,
+    "fields": {
+      "name": "n8n",
+      "category": "tools",
+      "proficiency": 75,
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 10,
+    "fields": {
+      "name": "Google AI Studio",
+      "category": "tools",
+      "proficiency": 70,
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 11,
+    "fields": {
+      "name": "Git & GitHub",
+      "category": "tools",
+      "proficiency": 75,
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 12,
+    "fields": {
+      "name": "SQLite",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 13,
+    "fields": {
+      "name": "HTML",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 14,
+    "fields": {
+      "name": "Gemini",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 15,
+    "fields": {
+      "name": "CO-STAR prompting method",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 16,
+    "fields": {
+      "name": "Google Gemini API",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 17,
+    "fields": {
+      "name": "Google Sheets API",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 18,
+    "fields": {
+      "name": "Google Calendar API",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 19,
+    "fields": {
+      "name": "OAuth 2.0",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 20,
+    "fields": {
+      "name": "matplotlib",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 21,
+    "fields": {
+      "name": "numpy",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 22,
+    "fields": {
+      "name": "seaborn",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 23,
+    "fields": {
+      "name": "JavaScript",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 24,
+    "fields": {
+      "name": "Webhooks",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 25,
+    "fields": {
+      "name": "REST APIs",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 26,
+    "fields": {
+      "name": "WorldTimeAPI",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.skill",
+    "pk": 27,
+    "fields": {
+      "name": "Chatbase",
+      "category": "tools",
+      "proficiency": 80,
+      "order": 0
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 1,
+    "fields": {
+      "title": "EDUCATION",
+      "organization": "Baylor University",
+      "location": "Waco, TX",
+      "start_date": "",
+      "end_date": "May 2026",
+      "employment_type": "",
+      "description": "",
+      "is_education": true,
+      "degree_major": "Bachelor of Business Administration â€“ Management Information Systems",
+      "gpa_honors": "Dean's Academic Honor List, Fall 2025",
+      "order": 1
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 2,
+    "fields": {
+      "title": "Data & AI Intern",
+      "organization": "Knight Energy Services",
+      "location": "Houston, TX",
+      "start_date": "",
+      "end_date": "Summer 2025",
+      "employment_type": "internship",
+      "description": "â€¢ Supported the implementation of enterprise AI systems by contributing to development, testing, and integration tasks,\r\nensuring seamless deployment across business operations.\r\nâ€¢ Migrated legacy PowerShell automation scripts to Python, improving code maintainability, scalability, and reducing manual\r\ntroubleshooting overhead.\r\nâ€¢ Partnered with cross-functional technical teams to optimize automation workflows, resulting in measurable improvements to\r\nsystem performance and operational reliability.",
+      "is_education": false,
+      "degree_major": "",
+      "gpa_honors": "",
+      "order": 2
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 3,
+    "fields": {
+      "title": "Business Intelligence Intern",
+      "organization": "Knight Energy Services",
+      "location": "Houston, TX",
+      "start_date": "",
+      "end_date": "Summer 2024",
+      "employment_type": "internship",
+      "description": "â€¢ Designed and deployed automated revenue reporting dashboards in Amazon QuickSight, reducing manual reporting time and\r\nimproving data accessibility for business stakeholders.\r\nâ€¢ Automated revenue reporting pipelines, reducing manual workload and improving data accuracy across financial operations.\r\nâ€¢ Performed accrual analysis on company revenue data to identify product-specific discrepancies, improving reporting integrity\r\nand decision-making",
+      "is_education": false,
+      "degree_major": "",
+      "gpa_honors": "",
+      "order": 3
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 4,
+    "fields": {
+      "title": "Data & Operations Intern",
+      "organization": "Knight Energy Services",
+      "location": "Houston, TX",
+      "start_date": "",
+      "end_date": "Summer 2023",
+      "employment_type": "internship",
+      "description": "â€¢ Organized and maintained a large technical dataset for tubular equipment product lines, structuring data for internal teams\r\nand customer-facing publication.\r\nâ€¢ Developed comprehensive product specification sheets in Excel for the full company catalog, ensuring accuracy and\r\nconsistency across all customer-facing documentation.\r\nâ€¢ Independently completed a stalled, multi-phase product documentation initiative, delivering a finished catalog used directly\r\nby customers and the sales team.",
+      "is_education": false,
+      "degree_major": "",
+      "gpa_honors": "",
+      "order": 4
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 5,
+    "fields": {
+      "title": "Associate Photographer",
+      "organization": "Anna Romani Photography â€“ Golden Graduates",
+      "location": "Waco, TX",
+      "start_date": "Spring 2025",
+      "end_date": "Present",
+      "employment_type": "",
+      "description": "â€¢ Collaborated with the lead photographer to capture high-quality graduation portraits for hundreds of students per season,\r\nmaintaining consistent quality under high-volume conditions.\r\nâ€¢ Directed student positioning and wardrobe adjustments to maintain shoot efficiency and schedule adherence without\r\ncompromising image quality.\r\nâ€¢ Fostered a professional and welcoming environment on high-traffic shoot days, quickly building rapport to ensure student\r\ncomfort and confidence on camera.",
+      "is_education": false,
+      "degree_major": "",
+      "gpa_honors": "",
+      "order": 5
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 6,
+    "fields": {
+      "title": "Founder & Owner",
+      "organization": "PhotosByLandri",
+      "location": "Houston, TX",
+      "start_date": "2019",
+      "end_date": "Present",
+      "employment_type": "",
+      "description": "â€¢ Managed the full client project lifecycle â€” from initial inquiry and creative consultation through final photo delivery â€”\r\nmaintaining accountability for quality and client satisfaction at every stage.\r\nâ€¢ Developed and executed a digital marketing strategy across social media platforms, growing a client base and converting\r\nfollowers into paying customers through consistent brand storytelling.\r\nâ€¢ Conducted client consultations to translate creative visions into detailed session plans, ensuring full alignment on concept,\r\nlocation, and expectations prior to each shoot.",
+      "is_education": false,
+      "degree_major": "",
+      "gpa_honors": "",
+      "order": 6
+    }
+  },
+  {
+    "model": "portfolio.siteprofile",
+    "pk": 1,
+    "fields": {
+      "about_heading": "Building With Intention, Designing for Trust",
+      "about_bio": "Hi, I'm Landri Robinson. I'm passionate about artificial intelligence and what it means to build it responsibly. I'm drawn to the intersection of AI development and ethical design: building systems that are transparent, auditable, and calibrated to the people who rely on them. I believe AI is most powerful when it helps organizations not just automate, but genuinely understand and interrogate their own data",
+      "about_tagline": "Problem-solver with a passion for AI and intelligent systems.",
+      "contact_email": "Landri_robinson@sbcglobal.net",
+      "contact_location": "Houston, TX",
+      "linkedin_url": "https://www.linkedin.com/in/landri-robinson-632848255/"
+    }
+  },
+  {
+    "model": "portfolio.sitesettings",
+    "pk": 1,
+    "fields": {
+      "resume_pdf": "resume/LandriRobinson_Resume.pdf"
+    }
   }
-},
-{
-  "model": "portfolio.project",
-  "pk": 2,
-  "fields": {
-    "title": "n8n Agent Workflow Project",
-    "summary": "An automated workflow agent built with n8n to streamline a real-world process.",
-    "description": "A multi-agent automation system built in n8n that handles the full workflow for a handyman business — from customer intake to pricing, scheduling, and sending a confirmation email.",
-    "category": "workflow",
-    "tools_used": "n8n, Google Gemini API, JavaScript, Webhooks, REST APIs, WorldTimeAPI",
-    "business_problem": "Small handyman businesses spend significant time manually handling customer inquiries, generating estimates, finding available time slots, and sending confirmation messages. This workflow automates the entire process so a customer message triggers all of that automatically.",
-    "key_features": "Five connected workflows — Intake Agent (extracts job details from customer messages using Gemini), Pricing Agent (calculates estimates using rules-based JavaScript), Scheduling Agent (pulls available time slots using an external API), Communications Agent (drafts a confirmation email using Gemini), and an Orchestrator that calls all four agents and returns a final business-ready output.",
-    "role": "Designed and built all five workflows from scratch using n8n's drag-and-drop interface, configured Gemini API prompts, wrote JavaScript logic for pricing and scheduling, and connected all agents through the Orchestrator.",
-    "challenges": "Getting Gemini to consistently output all the required fields in the correct format. The model would sometimes return incomplete or incorrectly structured responses, which required careful prompt engineering to fix.",
-    "lessons_learned": "How to design multi-agent systems where specialized agents handle one task each, how to prompt AI models for structured JSON output, and how to connect external APIs and AI within automated workflows.",
-    "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2.png",
-    "links": null,
-    "github_link": null,
-    "demo_link": null
-  }
-},
-{
-  "model": "portfolio.project",
-  "pk": 3,
-  "fields": {
-    "title": "LangChain Agent Project — Handyman Booking Assistant",
-    "summary": "A LangChain-powered AI agent that automates the full customer service flow for a handyman business, from generating price estimates to booking appointments on Google Calendar.",
-    "description": "This project uses LangChain and Google Gemini to build a conversational AI agent that can handle real customer service requests end to end. The agent connects to a live Google Sheet to pull pricing data, checks Google Calendar for available time slots, and creates confirmed bookings once the customer selects an appointment. The conversation is multi-turn, meaning the agent remembers context across the entire interaction and guides the customer from their initial request all the way through to a confirmed calendar event. The project was built by cloning a starter architecture and customizing it with personal Google Cloud credentials, a custom pricing sheet, and business-specific prompts tailored to the handyman service scenario.",
-    "category": "agent",
-    "tools_used": "Python, LangChain, Google Gemini API, Google Sheets API, Google Calendar API, OAuth 2.0",
-    "business_problem": "Small service businesses spend significant time manually handling customer inquiries, calculating estimates, and scheduling appointments. This project demonstrates how an AI agent with real tool integrations can automate that entire process in a single conversational flow.",
-    "key_features": "Multi-turn conversation flow that remembers context across the entire interaction. Pricing tool that reads live data from a Google Sheet to calculate estimates based on service type, urgency, and complexity. Scheduling tool that checks real Google Calendar availability and returns available time slots. Booking tool that creates a confirmed calendar event once the customer selects a slot. Full end-to-end automation from customer request to confirmed appointment.",
-    "role": "Configured and connected personal Google Cloud resources including a custom Google Sheet with pricing data and a personal Google Calendar. Generated all required credential files, tested each tool individually before running the full agent, and customized the assistant's tone and business logic for the handyman scenario.",
-    "challenges": "Getting the AI to consistently calculate the correct price based on the service type, urgency, and complexity multipliers, and ensuring the scheduling tool returned accurate available time slots from Google Calendar without errors.",
-    "lessons_learned": "How LangChain agents use tools to interact with external services. How to connect and authenticate with Google Cloud APIs using service accounts and OAuth credentials. How to test individual tools before integrating them into a full agent, and how to manage multi-turn conversation history so the AI maintains context across multiple exchanges.",
-    "image": "",
-    "links": null,
-    "github_link": "https://github.com/Landri-Robinson/HandyMan",
-    "demo_link": null
-  }
-},
-{
-  "model": "portfolio.project",
-  "pk": 4,
-  "fields": {
-    "title": "Google AI Studio Media Project",
-    "summary": "Built AI marketing campaign using Google AI Studio and prompt engineering to generate all promotional visuals.",
-    "description": "As a team, utilized advanced AI prompt engineering through the CO-STAR method to generate a full marketing campaign for a product my team and I created, the ACE Suit, a fictional military exoskeleton, including social media posts, a magazine cover, and promotional materials using Google AI Studio.",
-    "category": "media",
-    "tools_used": "Google AI Studio, Gemini, CO-STAR prompting method",
-    "business_problem": "Marketing teams need high-quality visuals to pitch products to buyers and stakeholders, but professional production is costly and time-consuming. This project demonstrated how AI image generation, guided by precise prompt engineering, can produce professional-grade marketing materials quickly and without a traditional creative team.",
-    "key_features": "Developed a fictional product concept including name, description, target audience, and unique selling proposition. Created a full marketing campaign using only AI-generated images. Wrote detailed CO-STAR prompts for each visual to control lighting, style, composition, and mood. Produced a magazine cover featuring a team member modeling the product. Created social media promotional posts tied to a real upcoming event. Designed an AI-generated team photo with a creative and professional concept.",
-    "role": "Responsible for writing and refining the AI prompts used throughout the project. Applied the CO-STAR method to craft detailed, specific prompts for each marketing visual, directing the AI on style, lighting, composition, mood, and specific visual elements to achieve professional-grade outputs. Contributed to the AI image generation process across all campaign materials.",
-    "challenges": "Getting AI to generate images that matched the exact creative vision. The model would often interpret prompts differently than expected, requiring multiple rounds of prompt refinement to achieve the desired output. Maintaining visual consistency across all campaign materials was also challenging, as small prompt changes could produce noticeably different styles, lighting, and aesthetics between images.",
-    "lessons_learned": "How to write precise and detailed AI prompts using the CO-STAR method to better control image outputs. Learned that small changes in wording can significantly affect the visual result, and that getting a specific outcome requires iteration and patience. Also learned the importance of establishing a consistent prompt structure early on to maintain visual cohesion across a full campaign.",
-    "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2_Tbu7wNw.png",
-    "links": null,
-    "github_link": null,
-    "demo_link": null
-  }
-},
-{
-  "model": "portfolio.project",
-  "pk": 5,
-  "fields": {
-    "title": "Machine Learning Project (scikit-learn)",
-    "summary": "A set of Python machine learning scripts using scikit-learn to build classification and regression models across three real-world datasets.",
-    "description": "This project explores machine learning fundamentals by applying classification and regression algorithms to five real-world datasets using scikit-learn. Models were built to predict outcomes ranging from flower species and handwritten digit recognition to disease progression, car fuel efficiency, and California home prices. Each script includes data preparation, model training, accuracy evaluation, and data visualization to communicate what the model learned.",
-    "category": "ml",
-    "tools_used": "Python, scikit-learn, matplotlib, numpy, pandas, seaborn",
-    "business_problem": "Organizations across industries need reliable ways to predict outcomes from data, whether that is identifying disease risk, recognizing patterns, or estimating property values. This project demonstrates how machine learning models can be applied to real datasets to solve these kinds of prediction and classification problems efficiently.",
-    "key_features": "K-Nearest Neighbors classification on the Iris dataset to predict flower species with accuracy scoring, wrong prediction identification, and confusion matrix heatmap visualization. Linear regression on the diabetes dataset using blood sugar levels to predict disease progression with coefficient and intercept analysis and a scatterplot with a regression line. Multi-feature linear regression on the Auto MPG dataset predicting car fuel efficiency from vehicle specifications including cylinders, displacement, horsepower, and weight. K-Nearest Neighbors classification on the digits dataset to recognize and classify handwritten numbers 0 through 9 with image grid visualization and confusion matrix evaluation. Linear regression on the California Housing dataset predicting median home values from neighborhood features with per-feature coefficient analysis and actual versus predicted value comparison. Train and test splitting across all models for proper evaluation and performance measurement.",
-    "role": "Wrote Python scripts to load and prepare datasets, build and train classification and regression models, evaluate model accuracy, visualize results using scatterplots and confusion matrix heatmaps, and compare actual versus predicted values across multiple datasets.",
-    "challenges": "Interpreting and translating model outputs, moving from raw numeric predictions to meaningful labels and visualizations that actually communicate what the model learned.",
-    "lessons_learned": "How visualization helps communicate what a model learned, and how to work with real datasets that have messy or missing data. Also gained a deeper understanding of how classification and regression models work differently and how to evaluate model performance beyond just accuracy.",
-    "image": "",
-    "links": null,
-    "github_link": "https://github.com/Landri-Robinson/Machine-Learning-Project-",
-    "demo_link": null
-  }
-},
-{
-  "model": "portfolio.project",
-  "pk": 6,
-  "fields": {
-    "title": "Campus SkillSwap — Django Project",
-    "summary": "A full-stack Django marketplace where students can post and discover skills to swap with each other.",
-    "description": "A full-stack Django marketplace where students can create accounts, post skills they offer, and browse or search for skills from other students.",
-    "category": "web",
-    "tools_used": "Python, Django, SQLite, Bootstrap, HTML",
-    "business_problem": "Students on college campuses often have valuable skills to share but no easy way to connect with peers who need them. Campus SkillSwap solves this by creating a peer-to-peer skill marketplace where students can post what they offer and find what they need.",
-    "key_features": "User authentication including register, login, and logout. Students can create, edit, and delete their own skill posts. Anyone can browse all available skills without logging in. Individual skill detail pages with full descriptions. A personal dashboard showing each user's own posts. Search functionality to filter skills by title or category. Built-in messaging system for students to communicate directly with each other. Django admin panel for managing all content.",
-    "role": "Built the entire application from scratch including project and app setup, Django models, forms, views, URLs, templates, and authentication. Designed the database structure, implemented CRUD functionality, and added search and Bootstrap styling.",
-    "challenges": "Designing and implementing the permission logic throughout the app. This included ensuring users cannot leave a review unless they have worked with that person, and restricting messaging to logged in users only. Thinking through all the different user scenarios and making sure the right restrictions were in place across the application.",
-    "lessons_learned": "Gained hands-on experience with Django's full MVT architecture by building a complete application from scratch using AI-assisted development. Learned how to think through user flows and permission logic before building, how to connect models, views, and templates, and how to implement user authentication and CRUD functionality. Also learned how to effectively use AI tools to scaffold and build a real-world web application.",
-    "image": "projects/campus_skills_swap_TTdjaq0.png",
-    "links": null,
-    "github_link": "https://github.com/Landri-Robinson/campus-skillswap",
-    "demo_link": "https://campus-skillswap.onrender.com/skill/3/"
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 1,
-  "fields": {
-    "name": "Python",
-    "category": "ai",
-    "proficiency": 85,
-    "order": 1
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 2,
-  "fields": {
-    "name": "LangChain",
-    "category": "ai",
-    "proficiency": 75,
-    "order": 2
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 3,
-  "fields": {
-    "name": "OpenAI API",
-    "category": "ai",
-    "proficiency": 80,
-    "order": 3
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 4,
-  "fields": {
-    "name": "scikit-learn",
-    "category": "ai",
-    "proficiency": 70,
-    "order": 4
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 5,
-  "fields": {
-    "name": "Django",
-    "category": "web",
-    "proficiency": 80,
-    "order": 1
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 6,
-  "fields": {
-    "name": "HTML & CSS",
-    "category": "web",
-    "proficiency": 85,
-    "order": 2
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 7,
-  "fields": {
-    "name": "Bootstrap",
-    "category": "web",
-    "proficiency": 80,
-    "order": 3
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 8,
-  "fields": {
-    "name": "pandas",
-    "category": "data",
-    "proficiency": 75,
-    "order": 1
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 9,
-  "fields": {
-    "name": "n8n",
-    "category": "tools",
-    "proficiency": 75,
-    "order": 1
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 10,
-  "fields": {
-    "name": "Google AI Studio",
-    "category": "tools",
-    "proficiency": 70,
-    "order": 2
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 11,
-  "fields": {
-    "name": "Git & GitHub",
-    "category": "tools",
-    "proficiency": 75,
-    "order": 3
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 12,
-  "fields": {
-    "name": "SQLite",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 13,
-  "fields": {
-    "name": "HTML",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 14,
-  "fields": {
-    "name": "Gemini",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 15,
-  "fields": {
-    "name": "CO-STAR prompting method",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 16,
-  "fields": {
-    "name": "Google Gemini API",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 17,
-  "fields": {
-    "name": "Google Sheets API",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 18,
-  "fields": {
-    "name": "Google Calendar API",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 19,
-  "fields": {
-    "name": "OAuth 2.0",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 20,
-  "fields": {
-    "name": "matplotlib",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 21,
-  "fields": {
-    "name": "numpy",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 22,
-  "fields": {
-    "name": "seaborn",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 23,
-  "fields": {
-    "name": "JavaScript",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 24,
-  "fields": {
-    "name": "Webhooks",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 25,
-  "fields": {
-    "name": "REST APIs",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 26,
-  "fields": {
-    "name": "WorldTimeAPI",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.skill",
-  "pk": 27,
-  "fields": {
-    "name": "Chatbase",
-    "category": "tools",
-    "proficiency": 80,
-    "order": 0
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 1,
-  "fields": {
-    "title": "EDUCATION",
-    "organization": "Baylor University",
-    "location": "Waco, TX",
-    "start_date": "",
-    "end_date": "May 2026",
-    "employment_type": "",
-    "description": "",
-    "is_education": true,
-    "degree_major": "Bachelor of Business Administration – Management Information Systems",
-    "gpa_honors": "Dean's Academic Honor List, Fall 2025",
-    "order": 1
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 2,
-  "fields": {
-    "title": "Data & AI Intern",
-    "organization": "Knight Energy Services",
-    "location": "Houston, TX",
-    "start_date": "",
-    "end_date": "Summer 2025",
-    "employment_type": "internship",
-    "description": "• Supported the implementation of enterprise AI systems by contributing to development, testing, and integration tasks,\r\nensuring seamless deployment across business operations.\r\n• Migrated legacy PowerShell automation scripts to Python, improving code maintainability, scalability, and reducing manual\r\ntroubleshooting overhead.\r\n• Partnered with cross-functional technical teams to optimize automation workflows, resulting in measurable improvements to\r\nsystem performance and operational reliability.",
-    "is_education": false,
-    "degree_major": "",
-    "gpa_honors": "",
-    "order": 2
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 3,
-  "fields": {
-    "title": "Business Intelligence Intern",
-    "organization": "Knight Energy Services",
-    "location": "Houston, TX",
-    "start_date": "",
-    "end_date": "Summer 2024",
-    "employment_type": "internship",
-    "description": "• Designed and deployed automated revenue reporting dashboards in Amazon QuickSight, reducing manual reporting time and\r\nimproving data accessibility for business stakeholders.\r\n• Automated revenue reporting pipelines, reducing manual workload and improving data accuracy across financial operations.\r\n• Performed accrual analysis on company revenue data to identify product-specific discrepancies, improving reporting integrity\r\nand decision-making",
-    "is_education": false,
-    "degree_major": "",
-    "gpa_honors": "",
-    "order": 3
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 4,
-  "fields": {
-    "title": "Data & Operations Intern",
-    "organization": "Knight Energy Services",
-    "location": "Houston, TX",
-    "start_date": "",
-    "end_date": "Summer 2023",
-    "employment_type": "internship",
-    "description": "• Organized and maintained a large technical dataset for tubular equipment product lines, structuring data for internal teams\r\nand customer-facing publication.\r\n• Developed comprehensive product specification sheets in Excel for the full company catalog, ensuring accuracy and\r\nconsistency across all customer-facing documentation.\r\n• Independently completed a stalled, multi-phase product documentation initiative, delivering a finished catalog used directly\r\nby customers and the sales team.",
-    "is_education": false,
-    "degree_major": "",
-    "gpa_honors": "",
-    "order": 4
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 5,
-  "fields": {
-    "title": "Associate Photographer",
-    "organization": "Anna Romani Photography – Golden Graduates",
-    "location": "Waco, TX",
-    "start_date": "Spring 2025",
-    "end_date": "Present",
-    "employment_type": "",
-    "description": "• Collaborated with the lead photographer to capture high-quality graduation portraits for hundreds of students per season,\r\nmaintaining consistent quality under high-volume conditions.\r\n• Directed student positioning and wardrobe adjustments to maintain shoot efficiency and schedule adherence without\r\ncompromising image quality.\r\n• Fostered a professional and welcoming environment on high-traffic shoot days, quickly building rapport to ensure student\r\ncomfort and confidence on camera.",
-    "is_education": false,
-    "degree_major": "",
-    "gpa_honors": "",
-    "order": 5
-  }
-},
-{
-  "model": "portfolio.experience",
-  "pk": 6,
-  "fields": {
-    "title": "Founder & Owner",
-    "organization": "PhotosByLandri",
-    "location": "Houston, TX",
-    "start_date": "2019",
-    "end_date": "Present",
-    "employment_type": "",
-    "description": "• Managed the full client project lifecycle — from initial inquiry and creative consultation through final photo delivery —\r\nmaintaining accountability for quality and client satisfaction at every stage.\r\n• Developed and executed a digital marketing strategy across social media platforms, growing a client base and converting\r\nfollowers into paying customers through consistent brand storytelling.\r\n• Conducted client consultations to translate creative visions into detailed session plans, ensuring full alignment on concept,\r\nlocation, and expectations prior to each shoot.",
-    "is_education": false,
-    "degree_major": "",
-    "gpa_honors": "",
-    "order": 6
-  }
-},
-{
-  "model": "portfolio.siteprofile",
-  "pk": 1,
-  "fields": {
-    "about_heading": "Building With Intention, Designing for Trust",
-    "about_bio": "Hi, I'm Landri Robinson. I'm passionate about artificial intelligence and what it means to build it responsibly. I'm drawn to the intersection of AI development and ethical design: building systems that are transparent, auditable, and calibrated to the people who rely on them. I believe AI is most powerful when it helps organizations not just automate, but genuinely understand and interrogate their own data",
-    "about_tagline": "Problem-solver with a passion for AI and intelligent systems.",
-    "contact_email": "Landri_robinson@sbcglobal.net",
-    "contact_location": "Houston, TX",
-    "linkedin_url": "https://www.linkedin.com/in/landri-robinson-632848255/"
-  }
-},
-{
-  "model": "portfolio.sitesettings",
-  "pk": 1,
-  "fields": {
-    "resume_pdf": "resume/LandriRobinson_Resume.pdf"
-  }
-}
 ]
