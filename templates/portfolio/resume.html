@@ -24,7 +24,7 @@
         {% if experience_first %}
 
           {% if experiences %}
-          <div style="margin-bottom:8px">
+          <div class="resume-section-header" style="margin-bottom:8px">
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Professional Experience</div>
             <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
           </div>
@@ -43,7 +43,7 @@
           {% endif %}
 
           {% if education %}
-          <div style="margin-bottom:8px;{% if experiences %}margin-top:40px;{% endif %}">
+          <div class="resume-section-header" style="margin-bottom:8px;{% if experiences %}margin-top:40px;{% endif %}">
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Education</div>
             <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
           </div>
@@ -65,7 +65,7 @@
         {% else %}
 
           {% if education %}
-          <div style="margin-bottom:8px">
+          <div class="resume-section-header" style="margin-bottom:8px">
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Education</div>
             <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
           </div>
@@ -85,7 +85,7 @@
           {% endif %}
 
           {% if experiences %}
-          <div style="margin-bottom:8px;{% if education %}margin-top:40px;{% endif %}">
+          <div class="resume-section-header" style="margin-bottom:8px;{% if education %}margin-top:40px;{% endif %}">
             <div style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:#6B7F8E;margin-bottom:6px">Professional Experience</div>
             <hr style="border:none;border-top:1px solid #DDE4E8;margin:0">
           </div>
@@ -143,6 +143,17 @@
     });
     el.innerHTML = '';
     el.appendChild(ul);
+  });
+
+  var items = Array.from(document.querySelectorAll('.resume-section-header, .resume-entry'));
+  items.forEach(function(el, i) {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(14px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    setTimeout(function() {
+      el.style.opacity = '1';
+      el.style.transform = 'translateY(0)';
+    }, 80 + i * 100);
   });
 </script>
 {% endblock %}
