@@ -17,8 +17,8 @@
   <!-- Navbar -->
   <nav class="navbar-main">
     <div class="container d-flex align-items-center justify-content-between position-relative">
-      <!-- Left Links -->
-      <div class="d-flex gap-1">
+      <!-- Left Links (desktop) -->
+      <div class="d-flex gap-1 nav-links-left">
         <a href="{% url 'home' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
         <a href="{% url 'about' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
         <a href="{% url 'projects' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a>
@@ -27,8 +27,8 @@
       <!-- Center Brand -->
       <a href="{% url 'home' %}" class="navbar-brand-center">My Portfolio</a>
 
-      <!-- Right Links -->
-      <div class="d-flex gap-1 align-items-center">
+      <!-- Right Links (desktop) -->
+      <div class="d-flex gap-1 align-items-center nav-links-right">
         <a href="{% url 'skills' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'skills' %}active{% endif %}">Skills</a>
         <a href="{% url 'resume' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'resume' %}active{% endif %}">Resume</a>
         <a href="{% url 'contact' %}" class="nav-link-custom {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
@@ -37,9 +37,28 @@
           <a href="{% url 'logout' %}" class="nav-link-custom">Logout</a>
         {% endif %}
       </div>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="nav-hamburger" id="navToggle" aria-label="Open navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
 
-    <!-- Social icons pinned to far right edge -->
+    <!-- Mobile dropdown menu -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="{% url 'home' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}">Home</a>
+      <a href="{% url 'about' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+      <a href="{% url 'projects' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a>
+      <a href="{% url 'skills' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'skills' %}active{% endif %}">Skills</a>
+      <a href="{% url 'resume' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'resume' %}active{% endif %}">Resume</a>
+      <a href="{% url 'contact' %}" class="nav-mobile-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+      {% if user.is_authenticated %}
+        <a href="{% url 'dashboard' %}" class="nav-mobile-link">Dashboard</a>
+        <a href="{% url 'logout' %}" class="nav-mobile-link">Logout</a>
+      {% endif %}
+    </div>
+
+    <!-- Social icons pinned to far right edge (desktop only) -->
     <div class="navbar-social-icons">
       <a href="https://github.com/" target="_blank" class="nav-link-custom"><i class="bi bi-github"></i></a>
       <a href="https://www.linkedin.com/in/landri-robinson-632848255/" target="_blank" class="nav-link-custom"><i class="bi bi-linkedin"></i></a>
@@ -78,6 +97,16 @@
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    var navToggle = document.getElementById('navToggle');
+    var navMobileMenu = document.getElementById('navMobileMenu');
+    if (navToggle) {
+      navToggle.addEventListener('click', function() {
+        navToggle.classList.toggle('open');
+        navMobileMenu.classList.toggle('open');
+      });
+    }
+  </script>
   <script>
     document.addEventListener('contextmenu', function(e) {
       if (e.target.tagName === 'IMG') e.preventDefault();
