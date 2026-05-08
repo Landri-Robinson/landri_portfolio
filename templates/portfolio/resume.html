@@ -1,4 +1,5 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
 {% block title %}Resume — Landri Robinson{% endblock %}
 
 {% block content %}
@@ -9,11 +10,7 @@
       <span class="page-header-eyebrow">Experience &amp; Skills</span>
       <h1 class="page-header-title">Resume</h1>
     </div>
-    {% if site_settings and site_settings.resume_pdf %}
-    <a href="{{ site_settings.resume_pdf.url }}" class="btn-primary-custom" style="font-size:0.72rem" download><i class="bi bi-download me-2"></i>Download PDF</a>
-    {% else %}
-    <span class="btn-primary-custom" style="font-size:0.72rem;opacity:0.4;cursor:default"><i class="bi bi-download me-2"></i>Download PDF</span>
-    {% endif %}
+    <a href="{% static 'resume/LandriRobinson_Resume.pdf' %}" class="btn-primary-custom" style="font-size:0.72rem" download><i class="bi bi-download me-2"></i>Download PDF</a>
   </div>
 </div>
 
