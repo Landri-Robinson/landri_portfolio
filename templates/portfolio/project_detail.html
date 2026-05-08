@@ -337,32 +337,36 @@ A calendar event has been created.</pre>
 
 {% endblock %}
 
+{% block extra_css %}
+<style>
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+{% endblock %}
+
 {% block extra_js %}
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var sidebar = document.querySelector('.sidebar-card');
-    if (sidebar) {
-      sidebar.style.opacity = '0';
-      sidebar.style.transform = 'translateY(16px)';
-      sidebar.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-      setTimeout(function() {
-        sidebar.style.opacity = '1';
-        sidebar.style.transform = 'translateY(0)';
-      }, 180);
-    }
-
-    var items = Array.from(document.querySelectorAll(
-      '.project-screenshot, .workflow-images > div, .detail-block'
-    ));
-    items.forEach(function(el, i) {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(16px)';
-      el.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
-      setTimeout(function() {
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, 80 + i * 100);
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(
+    '.project-screenshot, .workflow-images, .detail-block, .sidebar-card, .col-md-4 .project-card'
+  ).forEach(function(el) {
+    el.classList.add('scroll-reveal');
+    observer.observe(el);
   });
 </script>
 {% endblock %}
