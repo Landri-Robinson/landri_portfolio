@@ -24,7 +24,9 @@
       <div class="d-flex gap-2 flex-wrap">
         <a href="{% url 'projects' %}" class="tool-tag {% if not selected_category %}active{% endif %}" style="cursor:pointer;{% if not selected_category %}background:var(--slate-dark);color:var(--white);{% endif %}">All</a>
         {% for val, label in categories %}
+          {% if val != 'google_ai_studio' %}
           <a href="?category={{ val }}{% if query %}&query={{ query }}{% endif %}" class="tool-tag" style="cursor:pointer;{% if selected_category == val %}background:var(--slate-dark);color:var(--white);{% endif %}">{{ label }}</a>
+          {% endif %}
         {% endfor %}
       </div>
     </div>
