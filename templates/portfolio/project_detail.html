@@ -220,10 +220,7 @@ A calendar event has been created.</pre>
         </div>
         {% elif project.category == 'chatbot' %}
         <div class="workflow-images mb-4">
-          <div style="border:3px solid #6B7F8E;border-radius:10px;padding:20px">
-            <span class="detail-section-label" style="margin-bottom:8px;display:block">Chatbot Interface</span>
-            <img src="{% static 'images/chatbot_project.png' %}" alt="Chatbot Project" style="width:100%;height:500px;object-fit:contain;object-position:center;display:block">
-          </div>
+          <img src="{% static 'images/chatbot_project.png' %}" alt="Chatbot Project" style="width:100%;height:500px;object-fit:contain;object-position:center;display:block">
         </div>
 
         {% elif project.category == 'google_ai_studio' or 'Google AI Studio' in project.title %}
