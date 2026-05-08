@@ -4,7 +4,6 @@ set -e
 python manage.py migrate --no-input
 python manage.py collectstatic --no-input
 
-# Load fixture only if the database has no projects yet
 python manage.py shell -c "
 from portfolio.models import Project
 if not Project.objects.exists():
@@ -12,10 +11,9 @@ if not Project.objects.exists():
     call_command('loaddata', 'portfolio/fixtures/production_data.json')
     print('Fixture loaded.')
 else:
-    print('Data already exists — skipping fixture load.')
+    print('Data already exists, skipping fixture load.')
 "
 
-# Create or update superuser from env vars
 python manage.py shell -c "
 from django.contrib.auth import get_user_model
 import os
