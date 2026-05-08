@@ -9,7 +9,6 @@ class Project(models.Model):
         ('web', 'Web Development'),
         ('media', 'AI Media'),
         ('workflow', 'Workflow Automation'),
-        ('google_ai_studio', 'Google AI Studio Media Project'),
     ]
 
     title = models.CharField(max_length=200)
