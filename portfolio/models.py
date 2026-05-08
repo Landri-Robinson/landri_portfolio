@@ -23,6 +23,7 @@ class Project(models.Model):
     challenges = models.TextField(help_text="Biggest challenge faced")
     lessons_learned = models.TextField(help_text="What you learned")
     image = models.ImageField(upload_to='projects/', blank=True, null=True)
+    static_image = models.CharField(max_length=200, blank=True, default='', help_text="Filename inside static/images/ (e.g. 'campus skills swap.png')")
     links = models.URLField(blank=True, null=True)
     github_link = models.URLField(blank=True, null=True, help_text="GitHub repository URL")
     demo_link = models.URLField(blank=True, null=True, help_text="Live demo or deployed project URL")

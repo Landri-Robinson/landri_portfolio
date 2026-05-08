@@ -14,6 +14,7 @@
       "challenges": "Curating and formatting the training content so the chatbot could accurately answer specific questions about each project without giving incorrect or incomplete responses.",
       "lessons_learned": "How to train and deploy a custom AI chatbot using a no-code platform, how to structure training content for accurate responses, and how to embed a chatbot widget into a live web application.",
       "image": "",
+      "static_image": "",
       "links": null,
       "github_link": null,
       "demo_link": null
@@ -34,6 +35,7 @@
       "challenges": "Getting Gemini to consistently output all the required fields in the correct format. The model would sometimes return incomplete or incorrectly structured responses, which required careful prompt engineering to fix.",
       "lessons_learned": "How to design multi-agent systems where specialized agents handle one task each, how to prompt AI models for structured JSON output, and how to connect external APIs and AI within automated workflows.",
       "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2.png",
+      "static_image": "",
       "links": null,
       "github_link": null,
       "demo_link": null
@@ -54,6 +56,7 @@
       "challenges": "Getting the AI to consistently calculate the correct price based on the service type, urgency, and complexity multipliers, and ensuring the scheduling tool returned accurate available time slots from Google Calendar without errors.",
       "lessons_learned": "How LangChain agents use tools to interact with external services. How to connect and authenticate with Google Cloud APIs using service accounts and OAuth credentials. How to test individual tools before integrating them into a full agent, and how to manage multi-turn conversation history so the AI maintains context across multiple exchanges.",
       "image": "",
+      "static_image": "",
       "links": null,
       "github_link": "https://github.com/Landri-Robinson/HandyMan",
       "demo_link": null
@@ -74,6 +77,7 @@
       "challenges": "Getting AI to generate images that matched the exact creative vision. The model would often interpret prompts differently than expected, requiring multiple rounds of prompt refinement to achieve the desired output. Maintaining visual consistency across all campaign materials was also challenging, as small prompt changes could produce noticeably different styles, lighting, and aesthetics between images.",
       "lessons_learned": "How to write precise and detailed AI prompts using the CO-STAR method to better control image outputs. Learned that small changes in wording can significantly affect the visual result, and that getting a specific outcome requires iteration and patience. Also learned the importance of establishing a consistent prompt structure early on to maintain visual cohesion across a full campaign.",
       "image": "projects/Ivory_and_Black_Minimalist_Design_Studio_LinkedIn_Article_Cover_Image_2_Tbu7wNw.png",
+      "static_image": "",
       "links": null,
       "github_link": null,
       "demo_link": null
@@ -94,6 +98,7 @@
       "challenges": "Interpreting and translating model outputs, moving from raw numeric predictions to meaningful labels and visualizations that actually communicate what the model learned.",
       "lessons_learned": "How visualization helps communicate what a model learned, and how to work with real datasets that have messy or missing data. Also gained a deeper understanding of how classification and regression models work differently and how to evaluate model performance beyond just accuracy.",
       "image": "",
+      "static_image": "",
       "links": null,
       "github_link": "https://github.com/Landri-Robinson/Machine-Learning-Project-",
       "demo_link": null
@@ -113,7 +118,8 @@
       "role": "Built the entire application from scratch including project and app setup, Django models, forms, views, URLs, templates, and authentication. Designed the database structure, implemented CRUD functionality, and added search and Bootstrap styling.",
       "challenges": "Designing and implementing the permission logic throughout the app. This included ensuring users cannot leave a review unless they have worked with that person, and restricting messaging to logged in users only. Thinking through all the different user scenarios and making sure the right restrictions were in place across the application.",
       "lessons_learned": "Gained hands-on experience with Django's full MVT architecture by building a complete application from scratch using AI-assisted development. Learned how to think through user flows and permission logic before building, how to connect models, views, and templates, and how to implement user authentication and CRUD functionality. Also learned how to effectively use AI tools to scaffold and build a real-world web application.",
-      "image": "projects/campus_skills_swap_TTdjaq0.png",
+      "image": "",
+      "static_image": "campus skills swap.png",
       "links": null,
       "github_link": "https://github.com/Landri-Robinson/campus-skillswap",
       "demo_link": "https://campus-skillswap.onrender.com/skill/3/"

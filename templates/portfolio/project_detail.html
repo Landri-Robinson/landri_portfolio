@@ -225,7 +225,9 @@ A calendar event has been created.</pre>
         </div>
         {% else %}
         <div class="mb-4 project-screenshot" style="border:1px solid var(--border);background:var(--white)">
-          {% if project.image %}
+          {% if project.static_image %}
+            <img src="{% static 'images/' %}{{ project.static_image }}" alt="{{ project.title }}" class="w-100" style="max-height:420px;object-fit:cover">
+          {% elif project.image %}
             <img src="{{ project.image.url }}" alt="{{ project.title }}" class="w-100" style="max-height:420px;object-fit:cover">
           {% else %}
             <div style="height:280px;background:#C8D8E4;"></div>
