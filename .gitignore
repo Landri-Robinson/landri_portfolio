@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django
+db.sqlite3
+staticfiles/
+media/
+
+# Environment
+venv/
+.env
+*.env
+
+# Logs
+*.log
+
+# Generated files
+chatbot_training_content.txt
+
+# Claude
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db

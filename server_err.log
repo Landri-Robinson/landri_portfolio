@@ -1,9 +1,0 @@
-Watching for file changes with StatReloader
-[07/May/2026 21:35:06] "GET /about/ HTTP/1.1" 200 10208
-[07/May/2026 21:35:08] "GET /about/ HTTP/1.1" 200 10208
-[07/May/2026 21:35:10] "GET /about/ HTTP/1.1" 200 10208
-[07/May/2026 21:35:10] "GET /static/css/style.css HTTP/1.1" 200 13238
-[07/May/2026 21:35:10] "GET /static/images/My%20Headshot-edited-.jpg HTTP/1.1" 200 4764893
-[07/May/2026 21:35:10] "GET /static/images/hydrangea.png HTTP/1.1" 200 1619876
-Not Found: /favicon.ico
-[07/May/2026 21:35:11] "GET /favicon.ico HTTP/1.1" 404 4123
